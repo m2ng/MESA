@@ -6,7 +6,7 @@ MESA is a method to call ethnicity-specific associations for biobank-scale multi
 ## Requirements
 1. A working Linux environment
 2. Intel CPU that supports OpenMP and AVX (Tested on Intel(R) Xeon(R) Gold 6130 CPU @ 2.10GHz)
-3. GCC >= 9
+3. GCC >= 9 and build-essential
 4. Eigen >= 3.3.7 from [here](https://eigen.tuxfamily.org)
 
 ## Installation
