@@ -3,18 +3,18 @@ MESA is a method to call ethnicity-specific associations for biobank-scale multi
 
  MESA is only available on Linux.
 
-# Requirements
+## Requirements
 1. A working Linux environment
 2. Intel CPU that supports OpenMP and AVX (Tested on Intel(R) Xeon(R) Gold 6130 CPU @ 2.10GHz)
 3. GCC >= 9
 4. Eigen >= 3.3.7 from [here](https://eigen.tuxfamily.org)
 
-# Installation
+## Installation
 1. Specify variables `BUILD_DIR`, `SRC_DIR`, `EIGEN_DIR` in `makefile`
 2. Specify the user options in `common.h` if necessary.
 3. Run `make` at the project root to build MESA
 
-# How-to-use
+## How-to-use
 1. Export the environment variable `OMP_NUM_THREADS` before using MESA. e.g.
     ```bash
     export OMP_NUM_THREADS=4
@@ -22,7 +22,7 @@ MESA is a method to call ethnicity-specific associations for biobank-scale multi
 2. Run `./build/mesa` to see available options
 3. Follow the instructions [here](./example/README.md) to see how you may apply MESA to the data set you would like to analyze
 
-# Help
+## Help
 ```
 Usage: mesa -i INPUT [--cov COV_FILE] -N NUM_INDIVIDUALS -K NUM_ANCESTRIES -G NUM_SNPS -o OUTPUT_PREFIX [OPTION]...
 
@@ -59,7 +59,7 @@ Required arguments:
                                OUTPUT_PREFIX_effect.tsv
 ```
 
-# Output
+## Output
 - `*_p.tsv`: a G-by-K matrix of estimated baseline allele frequency intercept terms. The (g, k)-th entry corresponds to <img src="https://render.githubusercontent.com/render/math?math=\alpha_{gk}"> in the literature
 - `*_q.tsv`: a N-by-K matrix of estimated ancestry proportions. The (i, k)-th entry corresponds to <img src="https://render.githubusercontent.com/render/math?math=q_{ki}"> in the literature
 - `*_effect.tsv`: a G-by-(K * cov_num) matrix of estimated effect sizes, where 'cov_num' is the number of phenotypes tested. The (g, (k-1)*cov_num + r)-th entry corresponds to the estimate of <img src="https://render.githubusercontent.com/render/math?math=\gamma_{gkr}"> in the literature
