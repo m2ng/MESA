@@ -1,10 +1,17 @@
 # MESA
-MESA is a method to call ethnicity-specific associations for biobank-scale multi-ethnic GWAS.
+MESA is a method to call ethnicity-specific associations for biobank-scale multi-ethnic GWAS. This repository stores the C++ implementation of the statistical method used in my MPhil thesis "Identification of Population-specific Associations in Multi-ethnic Genome-wide Association Studies".
 
- MESA is only available on Linux.
+## Why should you use MESA?
+Here are the reasons of using MESA
+- You want to detect **ethnicity-specific** associations for GWAS with **admixture** populations
+- The data set you are analyzing comes from a **biobank-scale** GWAS
+- You want to analyze multiple binary or continuous phenotypes
+- You want to estimate admixture proportions of individuals
+- You want to estimate population-specific allele frequencies
+- You want a computationally efficient method to do all sorts of things mentioned above **simultaneously**
 
 ## Requirements
-1. A working Linux environment
+1. A Linux environment
 2. Intel CPU that supports OpenMP and AVX (Tested on Intel(R) Xeon(R) Gold 6130 CPU @ 2.10GHz)
 3. GCC >= 9 and build-essential
 4. Eigen >= 3.3.7 from [here](https://eigen.tuxfamily.org)
